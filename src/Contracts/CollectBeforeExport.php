@@ -1,6 +1,6 @@
 <?php
 
-namespace Superbalist\LaravelPrometheusExporter\Contracts;
+namespace Raftx24\LaravelPrometheusExporter\Contracts;
 
 interface CollectBeforeExport
 {

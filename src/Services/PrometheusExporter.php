@@ -1,10 +1,10 @@
 <?php
 
-namespace Superbalist\LaravelPrometheusExporter\Services;
+namespace Raftx24\LaravelPrometheusExporter\Services;
 
 use InvalidArgumentException;
 use Prometheus\CollectorRegistry;
-use Superbalist\LaravelPrometheusExporter\Contracts\CollectorInterface;
+use Raftx24\LaravelPrometheusExporter\Contracts\CollectorInterface;
 
 class PrometheusExporter
 {

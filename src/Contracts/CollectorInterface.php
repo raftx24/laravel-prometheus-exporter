@@ -1,8 +1,8 @@
 <?php
 
-namespace Superbalist\LaravelPrometheusExporter\Contracts;
+namespace Raftx24\LaravelPrometheusExporter\Contracts;
 
-use Superbalist\LaravelPrometheusExporter\Services\PrometheusExporter;
+use Raftx24\LaravelPrometheusExporter\Services\PrometheusExporter;
 
 interface CollectorInterface
 {

@@ -16,7 +16,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Superbalist\\LaravelPrometheusExporter\\": "src/",
+      "Raftx24\\LaravelPrometheusExporter\\": "src/",
       "Tests\\": "tests/"
     }
   },
@@ -26,10 +26,10 @@
     },
     "laravel": {
       "providers": [
-        "Superbalist\\LaravelPrometheusExporter\\AppServiceProvider"
+        "Raftx24\\LaravelPrometheusExporter\\AppServiceProvider"
       ],
       "aliases": {
-        "Prometheus": "Superbalist\\LaravelPrometheusExporter\\PrometheusFacade"
+        "Prometheus": "Raftx24\\LaravelPrometheusExporter\\PrometheusFacade"
       }
     }
   },

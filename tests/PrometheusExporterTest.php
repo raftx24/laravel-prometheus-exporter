@@ -8,8 +8,8 @@ use Prometheus\CollectorRegistry;
 use Prometheus\Counter;
 use Prometheus\Gauge;
 use Prometheus\Histogram;
-use Superbalist\LaravelPrometheusExporter\Contracts\CollectorInterface;
-use Superbalist\LaravelPrometheusExporter\Services\PrometheusExporter;
+use Raftx24\LaravelPrometheusExporter\Contracts\CollectorInterface;
+use Raftx24\LaravelPrometheusExporter\Services\PrometheusExporter;
 
 class PrometheusExporterTest extends TestCase
 {

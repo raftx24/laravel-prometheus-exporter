@@ -1,6 +1,6 @@
 <?php
 
-namespace Superbalist\LaravelPrometheusExporter\Services;
+namespace Raftx24\LaravelPrometheusExporter\Services;
 
 use InvalidArgumentException;
 use Prometheus\Storage\Adapter;

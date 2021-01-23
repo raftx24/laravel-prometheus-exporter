@@ -1,6 +1,6 @@
 <?php
 
-namespace Superbalist\LaravelPrometheusExporter;
+namespace Raftx24\LaravelPrometheusExporter;
 
 use Illuminate\Support\Facades\Facade;
 

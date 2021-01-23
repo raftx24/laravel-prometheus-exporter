@@ -21,7 +21,7 @@ Register the service provider in app.php
 ```php
 'providers' => [
     // ...
-    Superbalist\LaravelPrometheusExporter\PrometheusServiceProvider::class,
+    Raftx24\LaravelPrometheusExporter\PrometheusServiceProvider::class,
 ]
 ```
 
@@ -29,7 +29,7 @@ Register the facade in app.php
 ```php
 'aliases' => [
     // ...
-    'Prometheus' => Superbalist\LaravelPrometheusExporter\PrometheusFacade::class,
+    'Prometheus' => Raftx24\LaravelPrometheusExporter\PrometheusFacade::class,
 ]
 ```
 
@@ -52,7 +52,7 @@ PROMETHEUS_REDIS_PREFIX=PROMETHEUS_
 
 To customize the configuration file, publish the package configuration using Artisan.
 ```bash
-php artisan vendor:publish --provider="Superbalist\LaravelPrometheusExporter\PrometheusServiceProvider"
+php artisan vendor:publish --provider="Raftx24\LaravelPrometheusExporter\PrometheusServiceProvider"
 ```
 
 You can then edit the generated config at `app/config/prometheus.php`.
@@ -90,7 +90,7 @@ You can auto-load your collectors by adding them to the `collectors` array in th
 
 ```php
 // retrieve the exporter
-$exporter = app(\Superbalist\LaravelPrometheusExporter::class);
+$exporter = app(\Raftx24\LaravelPrometheusExporter::class);
 // or
 $exporter = app('prometheus');
 // or
