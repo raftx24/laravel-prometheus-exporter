@@ -1,9 +1,10 @@
 <?php
 
-namespace Superbalist\LaravelPrometheusExporter;
+namespace Superbalist\LaravelPrometheusExporter\Services;
 
 use InvalidArgumentException;
 use Prometheus\CollectorRegistry;
+use Superbalist\LaravelPrometheusExporter\Contracts\CollectorInterface;
 
 class PrometheusExporter
 {
@@ -65,10 +66,10 @@ class PrometheusExporter
      */
     public function registerCollector(CollectorInterface $collector)
     {
-        $name = $collector->getName();
+        $name = get_class($collector);
 
-        if (!isset($this->collectors[$name])) {
-            $this->collectors[$name] = $collector;
+        if (! isset($this->collectors[$name])) {
+            $this->collectors[get_class($collector)] = $collector;
 
             $collector->registerMetrics($this);
         }
@@ -93,7 +94,7 @@ class PrometheusExporter
      */
     public function getCollector($name)
     {
-        if (!isset($this->collectors[$name])) {
+        if (! isset($this->collectors[$name])) {
             throw new InvalidArgumentException(sprintf('The collector "%s" is not registered.', $name));
         }
 
@@ -242,8 +243,9 @@ class PrometheusExporter
     public function export()
     {
         foreach ($this->collectors as $collector) {
-            /* @var CollectorInterface $collector */
-            $collector->collect();
+            if ($collector instanceof CollectBeforeExport) {
+                $collector->collect();
+            }
         }
 
         return $this->prometheus->getMetricFamilySamples();

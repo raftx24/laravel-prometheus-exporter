@@ -1,10 +1,11 @@
 <?php
 
-namespace Superbalist\LaravelPrometheusExporter;
+namespace Superbalist\LaravelPrometheusExporter\Http\Controllers;
 
 use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Routing\Controller;
 use Prometheus\RenderTextFormat;
+use Superbalist\LaravelPrometheusExporter\Services\PrometheusExporter;
 
 class MetricsController extends Controller
 {

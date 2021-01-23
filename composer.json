@@ -26,7 +26,7 @@
     },
     "laravel": {
       "providers": [
-        "Superbalist\\LaravelPrometheusExporter\\PrometheusServiceProvider"
+        "Superbalist\\LaravelPrometheusExporter\\AppServiceProvider"
       ],
       "aliases": {
         "Prometheus": "Superbalist\\LaravelPrometheusExporter\\PrometheusFacade"

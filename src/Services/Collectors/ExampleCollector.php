@@ -1,6 +1,6 @@
 <?php
 
-namespace Superbalist\LaravelPrometheusExporter;
+namespace Superbalist\LaravelPrometheusExporter\Services\Collectors;
 
 use Prometheus\Gauge;
 
